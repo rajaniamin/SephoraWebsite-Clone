@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+
+    <title>Document</title>
+    <style>
+      .size{
+            width: 368px;
+        } input{
+            margin: 8px;
+            padding: 8px;
+            border: 1px solid grey;
+        }select{
+            width: 200px;
+            padding: 8px;
+            border: 1px solid grey;
+        }#join{
+            padding: 5px 25px 5px 25px;
+            background-color: black;
+            color: white;
+            border-radius: 20px;
+            text-align: center;
+        }.popup{
+            position: absolute;
+            top:-150%;
+            left: 50%;
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+            opacity: 0;
+            transform: translate(-60%,-60%) scale(1,25);
+            width: 500px;
+            height: 630px;
+            padding: 20px 30px;
+            background-color: white;
+            transition: top 0ms ease-in-out 200ms,
+                        opacity 0ms ease-in-out 0ms,
+                        transform 20ms ease-in-out 0ms;
+
+        }.popup.active{
+            top: 50%;
+            opacity: 1;
+            transform: translate(-60%,-60%) scale(1);
+            transition: top 0ms ease-in-out 0ms,
+                        opacity 0ms ease-in-out 0ms,
+                        transform 20ms ease-in-out 0ms;
+        }
+        .popup>.close-btn{
+            position: absolute;
+            top: 20px;
+            left: 500px;
+            width: 30px;
+            height: 30px;
+            text-align: center;
+            line-height: 15px;
+            cursor: pointer;
+        }
+        .form>h2{
+            text-align: center;
+            margin: 10px 0px 20px;
+        }.form>.form-elements{
+            display: block;
+            
+            text-decoration: none;
+
+        }
+    </style>
+</head>
+
+<body>
+        
+    <div class="popup">
+        <div class="close-btn">&times;</div>
+        <div class="form">
+            <h2>Create an Account</h2>
+
+            <div class="form-elements">
+                <img width="150px" src="https://www.sephora.com/img/ufe/bi/logo-beauty-insider.svg" alt="">
+                <p>Join the Beauty Insider loyalty program. Earn points, get FREE standard shipping, redeem rewards, and more.</p>
+                <input type="text" name="name" id="name" placeholder="First Name">
+                <input type="text" placeholder="Last Name">
+                <br>
+                <input type="text" id="email" placeholder="Email Address" class="size">
+                <br>
+                <input type="password" id="pass" class="size" placeholder="Password (6 to 12 characters)">
+                <br>
+                <input type="number" id="phone" placeholder="Phone(optional)" class="size">
+                <br>
+                <h4>Enter your birthdate to receive a free gift every year.</h4>
+                <select name="month" id=""> Month
+                    <option value="Jan">January</option>
+                    <option value="Feb">February</option>
+                    <option value="Mar">March</option>
+                    <option value="Apri">April</option>
+                    <option value="May">May</option>
+                    <option value="Jun">June</option>
+                    <option value="Jul">July</option>
+                    <option value="Aug">August</option>
+                    <option value="Sept">September</option>
+                    <option value="Oct">October</option>
+                    <option value="Nov">November</option>
+                    <option value="Dec">December</option>
+                </select>
+                <select name="day" id="">
+                    <option value="d1">1</option>
+                    <option value="d2">2</option>
+                    <option value="d3">3</option>
+                    <option value="d4">4</option>
+                    <option value="d5">5</option>
+                    <option value="d6">6</option>
+                    <option value="d7">7</option>
+                    <option value="d8">8</option>
+                    <option value="d9">9</option>
+                    <option value="d10">10</option>
+                    <option value="d11">11</option>
+                    <option value="d12">12</option>
+                    <option value="d13">13</option>
+                    <option value="d14">14</option>
+                    <option value="d15">15</option>
+                    <option value="d16">16</option>
+                    <option value="d17">17</option>
+                    <option value="d18">18</option>
+                    <option value="d19">19</option>
+                    <option value="d20">20</option>
+                    <option value="d21">21</option>
+                    <option value="d22">22</option>
+                    <option value="d23">23</option>
+                    <option value="d24">24</option>
+                    <option value="d25">25</option>
+                    <option value="d26">26</option>
+                    <option value="d27">27</option>
+                    <option value="d28">28</option>
+                    <option value="d29">29</option>
+                    <option value="d30">30</option>
+                    <option value="d31">31</option>
+                    
+                </select>
+                <br>
+        <input type="number
+        " name="" id="" class="size" placeholder="ZIP Code (to hear about store events near you)">
+        <br>
+        <input  type="checkbox" name="" id=""> Keep me signed 
+        <br>
+        <button onclick="join()"id="join">Join Now</button>
+            </div>
+           
+        
+      
+    </div>
+    
+</div>
+
+
+</html>
+<script>
+    document.querySelector(".popup").classList.add("active");
+
+    let data=JSON.parse(localStorage.getItem("details"))||[]
+    function join(){
+        let name=document.querySelector("#name").value;
+    console.log(name)
+    let email=document.querySelector("#email").value;
+    console.log(email)
+    let pass=document.querySelector("#pass").value;
+    console.log(pass)
+    let phone=document.querySelector("#phone").value;
+    console.log(phone)
+
+    let obj={
+        name,
+        email,
+        pass,
+        phone
+    }
+    data.push(obj)
+localStorage.setItem("deatils", JSON.stringify(data))
+    alert("Created Account Sucessfully")
+    }
+
+   
+</script>
