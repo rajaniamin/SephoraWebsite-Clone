@@ -100,6 +100,7 @@ rewardContainers .forEach((item, i) => {
     })
 })
 
+
   document.getElementById("createBtn").addEventListener("click", myfun)
 
 function myfun(){
@@ -109,6 +110,8 @@ function myfun(){
     document.querySelector(".signin-div>h2").innerText="Hello, rajani"
    
 }
+
+
 
 
 
