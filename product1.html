@@ -69,17 +69,19 @@
         <br>
         <img class="wish" width="30px" height="40px"
         src="https://th.bing.com/th/id/OIP.MunGuHHoS2p73PBI917uqwHaHa?w=191&h=192&c=7&r=0&o=5&dpr=1.25&pid=1.7"
-        alt=""></div>
+        alt="">
+    <br></div>
+
         </div>
     </div>
 
     <div id="abt">
         <div style="width: 25%;">
-            <h2>About the Product:</h2>
+            <h2 style="font-weight: 700;">About the Product:</h2>
         </div>
         <div style="width: 75%;">
             <p>A collection of best-selling makeup and skincare products for a festive Holiday look. Featuring a full size Anastasia Beverly Hills Brow Freeze® Extreme Hold Laminated-Look Sculpting Wax, KVD Beauty Tattoo Liner Vegan Waterproof Liquid Eyeliner, and ILIA Limitless Lash Lengthening Clean Mascara, and minis from Fenty Beauty by Rihanna, Grande Cosmetics, Rare Beauty and more.</p>
-            <h4>This Set Contains:</h4>
+            <h4 style="font-weight: 700;">This Set Contains:</h4>
             <p>- 1 x 0.28 oz / 8g Anastasia Beverly Hills Brow Freeze® Extreme Hold Laminated-Look Sculpting Wax (full size)</p>
             <p>- 1 x 0.18 oz / 5.5 ml Fenty Beauty by Rihanna Gloss Bomb Universal Lip Luminizer in Fenty Glow (deluxe)</p>
             <p>- 1 x 0.7 ml/ 0.02 oz Grande Cosmetics GrandeLASH - MD Lash Enhancing Serum (mini)</p>
@@ -93,7 +95,7 @@
 
     <div id="abt">
         <div style="width: 25%;">
-            <h2>Ingredients</h2>
+            <h2 style="font-weight: 700;">Ingredients:</h2>
         </div>
         <div style="width: 75%;">
             
@@ -112,10 +114,63 @@
 </html>
 
 <script>
-    let data=[];
+    let data=JSON.parse(localStorage.getItem("carts"))||[];
     document.querySelector("button").addEventListener("click", cart);
+    let count=0;
      function cart(){
-        document.querySelector("button").innerText="Added to Basket"
+        count++;
+        if(count>1){
+            alert("The item is already added to cart")
+        }else{
+            document.querySelector("button").innerText="Added to Basket"
+            let obj={
+            name: "Bliss Collection",
+            dis:" Makeup Must Have Set",
+            price:"$54.00 ($150.00 value)"
+        }
+        data.push(obj);
+
+        localStorage.setItem("carts", JSON.stringify(data))
+
+        }
+
+
+
         
+
+
+//         let div1=document.createElement("div");
+
+//         let image=document.createElement("img");
+//          image.setAttribute("src","https://www.sephora.com/productimages/sku/s2609493-main-zoom.jpg?imwidth=230");
+//          let title=document.createElement("h2");
+//          title.innerText="Bliss Collection";
+
+//          dis=document.createElement("p")
+//          dis.innerText="Makeup Must Haves Set";
+
+//          let price=document.createElement("p");
+//          price.innerText="$54.00 ($150.00 value)";
+
+//          let btn1=document.createElement("button");
+//          btn1.innerText="+"
+
+//          let btn2=document.createElement("button");
+//          btn1.innerText="Remove"
+//          let btn3=document.createElement("button");
+//          btn2.innerText="-"
+//          data.push(image,title,dis,price,btn1,btn2,btn3)
+//           console.log(data);
+
+// localStorage.setItem("cartItems",JSON.stringify(data));
+//          div1.append(image,title,dis,price,btn1,btn2,btn3);
+
+//          document.querySelector("body").append(div1)
+
+
+
+
+
+      
      }
 </script>

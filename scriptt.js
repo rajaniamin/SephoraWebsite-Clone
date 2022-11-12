@@ -100,7 +100,6 @@ rewardContainers .forEach((item, i) => {
     })
 })
 
-
   document.getElementById("createBtn").addEventListener("click", myfun)
 
 function myfun(){
@@ -112,6 +111,6 @@ function myfun(){
 }
 
 
-
-
-
+function searchh(){
+    
+}

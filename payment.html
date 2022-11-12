@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+  <style>
+    input{
+        padding: 10px;
+       
+    }*{
+        margin: 5px;
+    }.add{
+        width:360px
+
+    }button{
+        padding: 5px 15px 5px 15px;
+        background-color: black;
+        color: white;
+        border-radius: 20px;
+    }#billing{
+        width:400px;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        height: 480px;
+        
+    }#container{
+        display: flex;
+        width:50%;
+        margin: auto;
+        margin-top: 20px;
+        justify-content: space-between;
+    }#pay{
+        margin-top: 100px;
+    } h2{
+        text-align: center;
+    }select{
+        width:360px ;
+        padding: 10px;
+    }
+  </style>
+</head>
+<body>
+    <h2>BLISS</h2>
+    <div id="container">
+        <div id="billing">
+            
+            <h1 style="font-size:30px">Checkout</h1>
+            <hr>
+            <input class="name" type="text" name="" id="" placeholder="First Name*">
+            <input class="name" type="text" name="" id="" placeholder="Last Name*">
+            <br>
+            <input class="phone" type="number" name="" id="" placeholder="Phone number">
+            <br>
+            <input class="add" type="text" name="" id="" placeholder="Street Adress*">
+            <br>
+            <p style="color: rgb(11, 105, 142);">Add Apt #, Floor, etc.</p>
+            <input type="number" name="" id="" placeholder="ZIP/Postal Code">
+            <br>
+            <select name="" id="">
+                <option value="">Payment Method</option>
+                <option value="gp">UPI</option>
+                <option value="cd">Credit Card</option>
+                <option value="db">Debit Card</option>
+                
+            </select>
+            <br>
+            <input type="number" placeholder="Card Number">
+            <br>
+            <input type="password" placeholder="CVV">
+            <br>
+            <button onclick="datasa()" class="save" >Save & Continue</button>
+    
+        </div>
+        <div id="pay">
+            <p>Merchandise Subtotal:$54</p>
+            <p>Shipping & Handling:$:--
+            </p>
+            <p>Estimated Tax & Other Fees:$:--</p>
+            <hr>
+            <h2>Estimated Total:$180</h2>
+            
+            <button onclick="order()">Place Order</button>
+            
+                </div>
+    </div>
+    
+</body>
+</html>
+<script>
+    function datasa(){
+     alert("Information saved Sucessfully")
+    }
+
+function order(){
+    alert("Order Placed Sucesffully :)")
+}
+
+    
+</script>

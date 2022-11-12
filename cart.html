@@ -5,8 +5,258 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        #cont{
+            
+            width:300px;
+            margin: auto;
+            padding: 10px;
+            margin-top: 20px;
+            text-align: center;
+        }*{
+    font: inherit;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    
+
+}
+
+#nav>img{
+ margin-left: 150px;
+ margin-top: 5px;
+
+}#nav{
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    height: 85px;
+  
+    
+} #nav>div>input{
+    width:300px;
+    height: 15px;
+    border-radius: 20px;
+    background-color: rgb(241, 232, 232);
+    border: 1px solid white;
+    padding: 10px;
+    
+    margin: 13px 0px 20px 80px;
+    
+}#nav>div{
+   
+    padding: 20px;
+}.wish{
+    margin-top: 25px;
+}.signin{
+    margin-top: 20px;
+    
+}
+
+
+#option{
+    width: 100%;
+    height: 25px;
+    background-color: black;
+    justify-content: space-evenly;
+    display: flex;
+    padding: 10px;
+    align-items: center;
+    text-align: center;
+}#option>p{
+    color: white;
+}#emt{
+    padding: 5px 20px 5px 20px;
+    background-color: black;
+    color: white;
+    border-radius: 20px;
+}button{
+    padding: 5px 10px 5px 10px;
+    background-color: rgb(229, 31, 87);
+    color: white;
+    border: none;
+    border-radius: 10px;
+}
+#cont2{
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+            width:300px;
+            margin: auto;
+            padding: 10px;
+            margin-top: 20px;
+        }h2{
+            font-weight: 700;
+        } #pay{
+            width: 400px;
+            padding: 10px;
+           
+            margin: 10px;
+            padding: 100px;
+        }#containerr{
+            display: flex;
+            width:50%;
+            margin: auto;
+        }#pay>button{
+            margin: 5px;
+        }
+    </style>
 </head>
 <body>
+    <div id="nav">
+        <div>
+            <img width="100px" height="60px" src="C:\Users\Rajani\Desktop\Day-4\ceaseless-meeting-9748\images\logo2.png"
+                alt="">
+        </div>
+        <div><input type="text" placeholder="Search"></div>
+        <div>
+            <h4>Stores & Services</h4>
+        </div>
+        <div>
+            <h4>Community</h4>
+        </div>
+        
+       
+
+        <div><img class="wish" width="20px" height="20px"
+                src="https://th.bing.com/th/id/OIP.mqHRt02ERXq2CQRZf0R4qwHaHa?w=175&h=180&c=7&r=0&o=5&dpr=1.25&pid=1.7"
+                alt=""></div>
+        <div><img class="wish" width="20px" height="20px"
+                src="https://th.bing.com/th/id/OIP.MunGuHHoS2p73PBI917uqwHaHa?w=191&h=192&c=7&r=0&o=5&dpr=1.25&pid=1.7"
+                alt=""></div>
+        <div>
+            <a href="cart.html"><img class="wish" width="20px" height="20px"
+                src="https://th.bing.com/th/id/OIP.hBzysjakr2Qfc-_fpAFmDQAAAA?w=162&h=180&c=7&r=0&o=5&dpr=1.25&pid=1.7"
+                alt=""></a> 
+        </div>
+
+        
+
+    </div>
+    <div id="option" class="option">
+        <p class="new">New</p>
+        <p>Brand</p>
+        <p>Makeup</p>
+        <p>Skincare</p>
+        <p>Hair</p>
+        <p>Fragrance</p>
+        <p>Tools & Brushes</p>
+        <p>Bath & Body</p>
+        <p>Mini Size</p>
+        <p>Gifts</p>
+        <p>Beauty Under $20</p>
+        <p>Sales & Offers</p>
+
+
+    </div>
+    <div id="cont">
+        <h2>Your Basket is Currently empty</h2>
+        <button id="emt">Shop New Arrivals</button>
+    </div> 
+
+    <div id="containerr">
+        <div id="cart">
+
+        </div>
+    
+        <!-- <div id="cont">
+            <h2>Your Basket is Currently empty</h2>
+            <button id="emt">Shop New Arrivals</button>
+        </div> -->
+    
+        <div id="pay">
+    <p class="payyy">Merchandise Subtotal:$0</p>
+    <p>Shipping & Handling:TBD
+    </p>
+    <p>Estimated Tax & Other Fees:TBD</p>
+    <hr>
+    <h2 class="payy">Estimated Total:TBD</h2>
+    <a href="payment.html"><button>Checkout Shipped Items</button></a>
+    
+    <button>Pay with PayPal</button>
+    
+        </div>
+    </div>
+
     
 </body>
 </html>
+<script>
+    let data=JSON.parse(localStorage.getItem("carts"))
+console.log(data)
+
+    function displayTable(data){
+
+        
+        for(let i=0;i<data.length;i++){
+document.querySelector("#cont").innerHTML="";
+document.querySelector(".payyy").innerText="Merchandise Subtotal:$54"
+    let div1=document.createElement("div");
+    div1.setAttribute("id","cont2")
+    let image=document.createElement("img");
+        image.setAttribute("src","https://www.sephora.com/productimages/sku/s2609493-main-zoom.jpg?imwidth=230")
+    let td1=document.createElement("h2");
+    td1.innerText=data[i].name;
+   
+    let td2=document.createElement("p");
+    td2.innerText=data[i].dis;
+    let td3=document.createElement("p");
+    td3.innerText=data[i].price;
+    td3.setAttribute("class", "pri")
+
+   
+
+    let btn1=document.createElement("button")
+    btn1.innerText="+";
+
+    let quan=document.createElement("p");
+    quan.innerText=1;
+    let btn2=document.createElement("button");
+    btn2.innerText="-";
+
+    let btn=document.createElement("button")
+    btn.innerText="Remove";
+
+    btn.addEventListener("click", removefun)
+ function removefun(event){
+  event.preventDefault();
+  div1.remove();
+ }
+
+ btn1.addEventListener("click", inFun)
+let count=0;
+function inFun(event){
+  event.preventDefault();
+count++;
+quan.innerText=count+1;
+
+let x=quan.innerText*54;
+document.querySelector(".payy").innerText="Estimated Total:$"+x;
+
+
+}
+btn2.addEventListener("click", decFun)
+let count1=quan.innerText;
+function decFun(event){
+  event.preventDefault();
+count--;
+quan.innerText=count;
+if(count>=1){
+    let x=quan.innerText*54;
+document.querySelector(".payy").innerText="Estimated Total:$"+x;
+}
+
+
+if(quan.innerText<=1){
+  quan.innerText=1;
+}
+
+
+}
+    let emtp=document.createElement("p");
+    emtp.innerText="";
+
+    div1.append(image,td1,td2,td3,btn1,quan,btn2,emtp,btn)
+    document.querySelector("#cart").append(div1)
+ 
+        }
+        
+    }
+    displayTable(data);
+</script>
