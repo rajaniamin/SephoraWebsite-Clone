@@ -33,7 +33,7 @@
     margin-top: 25px;
 }.signin{
     margin-top: 20px;
-    
+
 }
 
 
@@ -705,11 +705,13 @@ text-align: center;
             background-color: rgb(237, 230, 230);   
             display:flex;
             padding: 10px;
+
             
             }#footer{
                 width: 100%;
                 height: 760px;
                 padding: 10px;
+
                 color: white;
                 background-color: black;
             }#footer1{
@@ -766,17 +768,18 @@ text-align: center;
 .signin {
     
     color: black;
+
     
     font-size: 16px;
     border: none;
-    
+
   }
   
   
   .nav {
     position: relative;
     display: inline-block;
-    
+
   }
   
  
@@ -787,8 +790,10 @@ text-align: center;
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
+
     width: 250px;
     
+
   }
   
 
@@ -805,6 +810,7 @@ text-align: center;
     display: block;
     font-weight: 700;
   }
+
   .signin-div a {
     color: white;
     background-color: black;
@@ -813,20 +819,15 @@ text-align: center;
     display: block;
     font-weight: 700;
   }
-  .signin-div button {
-    color: white;
-    padding: 5px 15px;
-    text-decoration: none;
-    display: block;
-    background-color: black;
-    border-radius: 20px;
-    margin: 5px;
-  }
+
+
   
   
+
   .signin-div p:hover {background-color: white;}
   .signin-div h2:hover {background-color: white}
   /* .signin-div button:hover {background-color: white;} */
+
   
  
   .nav:hover .signin-div {display: block;}
@@ -937,3 +938,6 @@ margin-top: 20px;
     width: 80%;
     margin: auto;
 }
+
+  
+
