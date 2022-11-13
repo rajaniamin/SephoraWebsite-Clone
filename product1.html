@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Bliss Collection</title>
     <link rel="stylesheet" href="style.css" />
 </head>
 <body>
     <div id="nav">
         <div>
-            <img width="100px" height="60px" src="C:\Users\Rajani\Desktop\Day-4\ceaseless-meeting-9748\images\logo2.png"
-                alt="">
+            <a href="index.html"> <img  width="100px" height="60px" src="C:\Users\Rajani\Desktop\Day-4\ceaseless-meeting-9748\images\logo2.png"
+                alt=""></a>
         </div>
         <div><input type="text" placeholder="Search"></div>
         <div>
@@ -26,9 +26,10 @@
         <div><img class="wish" width="20px" height="20px"
                 src="https://th.bing.com/th/id/OIP.mqHRt02ERXq2CQRZf0R4qwHaHa?w=175&h=180&c=7&r=0&o=5&dpr=1.25&pid=1.7"
                 alt=""></div>
-        <div><img class="wish" width="20px" height="20px"
-                src="https://th.bing.com/th/id/OIP.MunGuHHoS2p73PBI917uqwHaHa?w=191&h=192&c=7&r=0&o=5&dpr=1.25&pid=1.7"
-                alt=""></div>
+        <div> <a href="wishlist.html"><img class="wish" width="20px" height="20px"
+            src="https://th.bing.com/th/id/OIP.MunGuHHoS2p73PBI917uqwHaHa?w=191&h=192&c=7&r=0&o=5&dpr=1.25&pid=1.7"
+            alt=""></a></div>
+               
         <div>
             <a href="cart.html"><img class="wish" width="20px" height="20px"
                 src="https://th.bing.com/th/id/OIP.hBzysjakr2Qfc-_fpAFmDQAAAA?w=162&h=180&c=7&r=0&o=5&dpr=1.25&pid=1.7"
@@ -67,7 +68,7 @@
         <p>or $13.50 off your Sephora order when you open and use a Sephora Credit Card today.</p>
         <button>Add to Basket</button>
         <br>
-        <img class="wish" width="30px" height="40px"
+        <img class="wish" width="30px" height="40px" onclick="wishlist()"
         src="https://th.bing.com/th/id/OIP.MunGuHHoS2p73PBI917uqwHaHa?w=191&h=192&c=7&r=0&o=5&dpr=1.25&pid=1.7"
         alt="">
     <br></div>
@@ -134,7 +135,27 @@
 
         }
 
+    }
 
+    let data1=JSON.parse(localStorage.getItem("wishlist"))||[];
+    function wishlist(){
+        count++;
+        if(count>1){
+            alert("The item is already added to wishlist. Do you want to remove from wishlist?")
+        }else{
+            
+            let obj={
+            name: "Bliss Collection",
+            dis:" Makeup Must Have Set",
+            price:"$54.00 ($150.00 value)"
+        }
+        data1.push(obj);
+
+        localStorage.setItem("wishlist", JSON.stringify(data1))
+
+        }
+
+    }
 
         
 
@@ -172,5 +193,5 @@
 
 
       
-     }
+     
 </script>

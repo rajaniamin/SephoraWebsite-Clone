@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wishlist</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <div id="nav">
+        <div>
+            <a href="index.html"> <img  width="100px" height="60px" src="C:\Users\Rajani\Desktop\Day-4\ceaseless-meeting-9748\images\logo2.png"
+                alt=""></a>
+        </div>
+        <div><input type="text" placeholder="Search"></div>
+        <div>
+            <h4>Stores & Services</h4>
+        </div>
+        <div>
+            <h4>Community</h4>
+        </div>
+        
+       
+
+        <div><img class="wish" width="20px" height="20px"
+                src="https://th.bing.com/th/id/OIP.mqHRt02ERXq2CQRZf0R4qwHaHa?w=175&h=180&c=7&r=0&o=5&dpr=1.25&pid=1.7"
+                alt=""></div>
+        <div><img class="wish" width="20px" height="20px"
+                src="https://th.bing.com/th/id/OIP.MunGuHHoS2p73PBI917uqwHaHa?w=191&h=192&c=7&r=0&o=5&dpr=1.25&pid=1.7"
+                alt=""></div>
+        <div>
+            <a href="cart.html"><img class="wish" width="20px" height="20px"
+                src="https://th.bing.com/th/id/OIP.hBzysjakr2Qfc-_fpAFmDQAAAA?w=162&h=180&c=7&r=0&o=5&dpr=1.25&pid=1.7"
+                alt=""></a> 
+        </div>
+
+        
+
+    </div>
+    <div id="option" class="option">
+        <p class="new">New</p>
+        <p>Brand</p>
+        <p>Makeup</p>
+        <p>Skincare</p>
+        <p>Hair</p>
+        <p>Fragrance</p>
+        <p>Tools & Brushes</p>
+        <p>Bath & Body</p>
+        <p>Mini Size</p>
+        <p>Gifts</p>
+        <p>Beauty Under $20</p>
+        <p>Sales & Offers</p>
+
+
+    </div>
+    <div id="wwcont">
+        <h2>Wish is is empty:(  Wanna add something? </h2>
+        <a href="product.html"><button id="emt">Shop New Arrivals</button></a>
+        
+    </div> 
+    <div id="wcont"></div>
+</body>
+</html>
+<script>
+      let data1=JSON.parse(localStorage.getItem("wishlist"))
+console.log(data1)
+
+    function displayTable(data){
+
+        
+        for(let i=0;i<data.length;i++){
+
+            document.querySelector("#wwcont").innerHTML="";
+    let div1=document.createElement("div");
+    div1.setAttribute("id","cont2")
+    let image=document.createElement("img");
+        image.setAttribute("src","https://www.sephora.com/productimages/sku/s2609493-main-zoom.jpg?imwidth=230")
+    let td1=document.createElement("h2");
+    td1.innerText=data[i].name;
+   
+    let td2=document.createElement("p");
+    td2.innerText=data[i].dis;
+    let td3=document.createElement("p");
+    td3.innerText=data[i].price;
+    td3.setAttribute("class", "pri")
+
+   
+
+    
+
+    let btn=document.createElement("button")
+    btn.innerText="Remove from Wishlist";
+    btn.addEventListener("click", removefun)
+ function removefun(event){
+  event.preventDefault();
+  div1.remove();
+ }
+   
+
+    div1.append(image,td1,td2,td3,btn)
+    document.querySelector("#wcont").append(div1)
+ 
+        }
+        
+    }
+    displayTable(data1);
+</script>
