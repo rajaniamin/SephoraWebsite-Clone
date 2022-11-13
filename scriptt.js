@@ -111,6 +111,11 @@ function myfun(){
 }
 
 
-function searchh(){
-    
+document.querySelector(".reward-button").addEventListener("click", addFun);
+count=0;
+function addFun(e){
+    e.preventDefault();
+    count=count+100;
+    console.log(count)
+    document.querySelector(".add").innerText="You have" +" "+count +" "+"points. Keep earning to redeem rewards!"
 }

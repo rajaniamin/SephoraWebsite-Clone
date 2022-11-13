@@ -1,41 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-      <link rel="stylesheet" href="style.css" />
+    <title>Product</title>
+    <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
     <div id="nav">
         <div>
-            <img width="100px" height="60px" src="C:\Users\Rajani\Desktop\Day-4\ceaseless-meeting-9748\images\logo2.png"
-                alt="">
+            <a href="index.html"> <img width="100px" height="60px"
+                    src="C:\Users\Rajani\Desktop\Day-4\ceaseless-meeting-9748\images\logo2.png" alt=""></a>
+
         </div>
-        <div><input type="text" placeholder="Search"></div>
+        <div><input class="searchh" type="text" placeholder="Search" oninput="search()"></div>
         <div>
             <h4>Stores & Services</h4>
         </div>
         <div>
             <h4>Community</h4>
         </div>
-        
-       
+
+
 
         <div><img class="wish" width="20px" height="20px"
                 src="https://th.bing.com/th/id/OIP.mqHRt02ERXq2CQRZf0R4qwHaHa?w=175&h=180&c=7&r=0&o=5&dpr=1.25&pid=1.7"
                 alt=""></div>
-        <div><img class="wish" width="20px" height="20px"
-                src="https://th.bing.com/th/id/OIP.MunGuHHoS2p73PBI917uqwHaHa?w=191&h=192&c=7&r=0&o=5&dpr=1.25&pid=1.7"
-                alt=""></div>
+        <div> <a href="wishlist.html"><img class="wish" width="20px" height="20px"
+            src="https://th.bing.com/th/id/OIP.MunGuHHoS2p73PBI917uqwHaHa?w=191&h=192&c=7&r=0&o=5&dpr=1.25&pid=1.7"
+            alt=""></a></div>
         <div>
             <a href="cart.html"><img class="wish" width="20px" height="20px"
-                src="https://th.bing.com/th/id/OIP.hBzysjakr2Qfc-_fpAFmDQAAAA?w=162&h=180&c=7&r=0&o=5&dpr=1.25&pid=1.7"
-                alt=""></a> 
+                    src="https://th.bing.com/th/id/OIP.hBzysjakr2Qfc-_fpAFmDQAAAA?w=162&h=180&c=7&r=0&o=5&dpr=1.25&pid=1.7"
+                    alt=""></a>
         </div>
 
-        
+
 
     </div>
     <div id="option" class="option">
@@ -54,184 +57,376 @@
 
 
     </div>
+       <div>
+        <select onchange="filterr()" class="filt" name="" id="">
+            <option value="">Filter by Price</option>
+            <option value="20">Below $20</option>
+            <option value="50">Below $50</option>
+            <option value="80">Below $80</option>
+            <option value="100">Below $100</option>
+            <option value="150">Below $200</option>
+        </select>
+       </div>
     <div id="pcontainer">
         <div>
-           
-            
-                <span>NEW</span>
-                <br>
-                <span>LIMITED EDITION</span>
-                <br>
-                
-                <img src="https://www.sephora.com/productimages/sku/s2609493-main-zoom.jpg?imwidth=230"
-                    alt="">
-                  <a style="color: black;" href="product1.html"><h3>Bliss Collection</h3></a>  
-                    <p>Makeup must have Set</p>
-                    <h2>$52</h2>
-        
-        </div>
-        <div>
-           
-            
+
+
             <span>NEW</span>
             <br>
             <span>LIMITED EDITION</span>
             <br>
-            
-            <img src="https://www.sephora.com/productimages/sku/s2593341-main-zoom.jpg?imwidth=230"
-                alt="">
-                <h3> Collection</h3>
-                <p>Makeup must have Set</p>
-                <h2>$52</h2>
-    
-    </div>
-    <div>
-           
-            
-      
-        <span>LIMITED EDITION</span>
-        <br>
-        
-        <img src="https://www.sephora.com/productimages/sku/s2595221-main-zoom.jpg?imwidth=230"
-            alt="">
+
+            <img src="https://www.sephora.com/productimages/sku/s2609493-main-zoom.jpg?imwidth=230" alt="">
+            <a style="color: black;" href="product1.html">
+                <h3>Bliss Collection</h3>
+            </a>
+            <p>Makeup must have Set</p>
+            <h2>$52</h2>
+
+        </div>
+        <div>
+
+
+            <span>NEW</span>
+            <br>
+            <span>LIMITED EDITION</span>
+            <br>
+
+            <img src="https://www.sephora.com/productimages/sku/s2593341-main-zoom.jpg?imwidth=230" alt="">
+            <h3>Bliss Favarites</h3>
+            <p>Mini Holiday Must Haves Set/p>
+            <h2>$52</h2>
+
+        </div>
+        <div>
+
+
+
+            <span>LIMITED EDITION</span>
+            <br>
+
+            <img src="https://www.sephora.com/productimages/sku/s2595221-main-zoom.jpg?imwidth=230" alt="">
+            <h3>MAKEUP BY MARIO</h3>
+            <p>Ethereal Eyes Eyeshadow Palette</p>
+            <h2>$28</h2>
+
+        </div>
+        <div>
+
+
+            <span>NEW</span>
+            <br>
+            <span>LIMITED EDITION</span>
+            <br>
+
+            <img src="https://www.sephora.com/productimages/sku/s2617744-main-zoom.jpg?imwidth=164" alt="">
+            <h3>Kaja</h3>
+            <p>Sparkly Clean Makeup Set</p>
+            <h2>$60</h2>
+
+        </div>
+        <div>
+
+
+            <span>LIMITED EDITION</span>
+            <br>
+
+            <img src="https://www.sephora.com/productimages/sku/s2626786-main-zoom.jpg?imwidth=164" alt="">
             <h3>Bliss Collection</h3>
             <p>Makeup must have Set</p>
             <h2>$52</h2>
 
-</div>
-<div>
-           
-            
-    <span>NEW</span>
-    <br>
-    <span>LIMITED EDITION</span>
-    <br>
-    
-    <img src="https://www.sephora.com/productimages/sku/s2617744-main-zoom.jpg?imwidth=164"
-        alt="">
-        <h3>Bliss Collection</h3>
-        <p>Makeup must have Set</p>
-        <h2>$52</h2>
+        </div>
+        <div>
 
-</div>
-<div>
-           
-    
-    <span>LIMITED EDITION</span>
-    <br>
-    
-    <img src="https://www.sephora.com/productimages/sku/s2626786-main-zoom.jpg?imwidth=164"
-        alt="">
-        <h3>Bliss Collection</h3>
-        <p>Makeup must have Set</p>
-        <h2>$52</h2>
 
-</div>
-<div>
-           
-            
-    <span>NEW</span>
-    <br>
-    
-    
-    <img src="https://www.sephora.com/productimages/sku/s2609451-main-zoom.jpg?imwidth=164"
-        alt="">
-        <h3>Bliss Collection</h3>
-        <p>Makeup must have Set</p>
-        <h2>$52</h2>
+            <span>NEW</span>
+            <br>
 
-</div>
-<div>
-           
-            
-    <span>NEW</span>
-    <br>
-    <span>LIMITED EDITION</span>
-    <br>
-    
-    <img src="https://www.sephora.com/productimages/sku/s2612216-main-zoom.jpg?imwidth=164"
-        alt="">
-        <h3>Bliss Collection</h3>
-        <p>Makeup must have Set</p>
-        <h2>$52</h2>
 
-</div>
-<div>
-           
-            
-    <span>NEW</span>
-    <br>
-    <span>LIMITED EDITION</span>
-    <br>
-    
-    <img src="https://www.sephora.com/productimages/sku/s2579720-main-zoom.jpg?imwidth=164"
-        alt="">
-        <h3>Bliss Collection</h3>
-        <p>Makeup must have Set</p>
-        <h2>$52</h2>
+            <img src="https://www.sephora.com/productimages/sku/s2609451-main-zoom.jpg?imwidth=164" alt="">
+            <h3>Dyson</h3>
+            <p>Makeup must have Set</p>
+            <h2>$252</h2>
 
-</div>
-<div>
-           
-            
-    
-    <span>LIMITED EDITION</span>
-    <br>
-    
-    <img src="https://www.sephora.com/productimages/sku/s2593333-main-zoom.jpg?pb=2020-03-sephora-clean-2019&imwidth=164"
-        alt="">
-        <h3>Bliss Collection</h3>
-        <p>Makeup must have Set</p>
-        <h2>$52</h2>
+        </div>
+        <div>
 
-</div>
-<div>
-           
-            
-    <span>NEW</span>
-    <br>
-    <span>LIMITED EDITION</span>
-    <br>
-    
-    <img src="https://www.sephora.com/productimages/sku/s2596401-main-zoom.jpg?pb=2020-03-sephora-clean-2019&imwidth=164"
-        alt="">
-        <h3>Bliss Collection</h3>
-        <p>Makeup must have Set</p>
-        <h2>$52</h2>
 
-</div>
-<div>
-           
-            
-    <span>NEW</span>
-    <br>
-   
-    <img src="https://www.sephora.com/productimages/sku/s2609469-main-zoom.jpg?imwidth=164"
-        alt="">
-        <h3>Bliss Collection</h3>
-        <p>Makeup must have Set</p>
-        <h2>$52</h2>
+            <span>NEW</span>
+            <br>
+            <span>LIMITED EDITION</span>
+            <br>
 
-</div>
-<div>
-           
-            
-    <span>NEW</span>
-    <br>
-    <span>LIMITED EDITION</span>
-    <br>
-    
-    <img src="https://www.sephora.com/productimages/sku/s2619328-main-zoom.jpg?pb=clean-planet-positive-badge-2021&imwidth=164"
-        alt="">
-        <h3>Bliss Collection</h3>
-        <p>Makeup must have Set</p>
-        <h2>$52</h2>
+            <img src="https://www.sephora.com/productimages/sku/s2612216-main-zoom.jpg?imwidth=164" alt="">
+            <h3>Bliss Collection</h3>
+            <p>Makeup must have Set</p>
+            <h2>$80</h2>
 
-</div>
+        </div>
+        <div>
+
+
+            <span>NEW</span>
+            <br>
+            <span>LIMITED EDITION</span>
+            <br>
+
+            <img src="https://www.sephora.com/productimages/sku/s2579720-main-zoom.jpg?imwidth=164" alt="">
+            <h3>Bliss Collection</h3>
+            <p>Makeup must have Set</p>
+            <h2>$100</h2>
+
+        </div>
+        <div>
+
+
+
+            <span>LIMITED EDITION</span>
+            <br>
+
+            <img src="https://www.sephora.com/productimages/sku/s2593333-main-zoom.jpg?pb=2020-03-sephora-clean-2019&imwidth=164"
+                alt="">
+            <h3>Charlotte Tilbury</h3>
+            <p>Makeup must have Set</p>
+            <h2>$52</h2>
+
+        </div>
+        <div>
+
+
+            <span>NEW</span>
+            <br>
+            <span>LIMITED EDITION</span>
+            <br>
+
+            <img src="https://www.sephora.com/productimages/sku/s2596401-main-zoom.jpg?pb=2020-03-sephora-clean-2019&imwidth=164"
+                alt="">
+            <h3>Bliss Collection</h3>
+            <p>Makeup must have Set</p>
+            <h2>$52</h2>
+
+        </div>
+        <div>
+
+
+            <span>NEW</span>
+            <br>
+
+            <img src="https://www.sephora.com/productimages/sku/s2609469-main-zoom.jpg?imwidth=164" alt="">
+            <h3>Rare Beauty by Selena Gomez</h3>
+            <p>Makeup must have Set</p>
+            <h2>$52</h2>
+
+        </div>
+        <div>
+
+
+            <span>NEW</span>
+            <br>
+            <span>LIMITED EDITION</span>
+            <br>
+
+            <img src="https://www.sephora.com/productimages/sku/s2619328-main-zoom.jpg?pb=clean-planet-positive-badge-2021&imwidth=164"
+                alt="">
+            <h3>Bliss Collection</h3>
+            <p>Makeup must have Set</p>
+            <h2>$52</h2>
+
+        </div>
+        <div>
+
+
+            <span>NEW</span>
+            <br>
+            <span>LIMITED EDITION</span>
+            <br>
+
+            <img src="https://www.sephora.com/productimages/sku/s2513471-main-zoom.jpg?imwidth=230" alt="">
+            <h3>Bliss Favarites</h3>
+            <p>Blush N' Glow Cheek Set</p>
+            <h2>$120</h2>
+
+        </div>
+
+        <div>
+
+
+            <span>NEW</span>
+            <br>
+            <span>LIMITED EDITION</span>
+            <br>
+
+            <img src="https://www.sephora.com/productimages/sku/s2618825-main-zoom.jpg?imwidth=230" alt="">
+            <h3>Rare Beauty by Selena Gomez</h3>
+            <p>Perfect Strokes Eye Essentials Duo</p>
+            <h2>$28</h2>
+
+        </div>
+
+        <div>
+
+
+            <span>NEW</span>
+            <br>
+            <span>LIMITED EDITION</span>
+            <br>
+
+            <img src="https://www.sephora.com/productimages/sku/s2612943-main-zoom.jpg?imwidth=230" alt="">
+            <h3>Dyson</h3>
+            <p>Special Edition Airwrap™ Multi-Styler Long</p>
+            <h2>$52</h2>
+
+        </div>
+
+        <div>
+
+
+            <span>NEW</span>
+            <br>
+            <span>LIMITED EDITION</span>
+            <br>
+
+            <img src="https://www.sephora.com/productimages/sku/s2447738-main-zoom.jpg?imwidth=230" alt="">
+            <h3>Charlotte Tilbury</h3>
+            <p>Mini Pillow Talk Lipstick & Liner Set</p>
+            <h2>$25</h2>
+
+        </div>
+
+        <div>
+
+
+            <span>NEW</span>
+            <br>
+            <span>LIMITED EDITION</span>
+            <br>
+
+            <img src="https://www.sephora.com/productimages/sku/s2630028-main-zoom.jpg?imwidth=230" alt="">
+            <h3>Yves Saint Laurent</h3>
+            <p>Mini Rouge Pur Satin Lipstick Trio</p>
+            <h2>$40</h2>
+
+        </div>
+
+        <div>
+
+
+            <span>NEW</span>
+            <br>
+            <span>LIMITED EDITION</span>
+            <br>
+
+            <img src="https://www.sephora.com/productimages/sku/s2622678-main-zoom.jpg?imwidth=230" alt="">
+            <h3>Charlotte Tilbury</h3>
+            <p>Mini Iconic Matte Lip Trio Set</p>
+            <h2>$52</h2>
+
+        </div>
+
+
+        <div>
+
+
+            <span>NEW</span>
+            <br>
+            <span>LIMITED EDITION</span>
+            <br>
+
+            <img src="https://www.sephora.com/productimages/sku/s2619013-main-zoom.jpg?imwidth=230" alt="">
+            <h3>NARS</h3>
+            <p>Behave Backstage Cheek Set</p>
+            <h2>$52</h2>
+
+        </div>
+
+        <div>
+
+
+            <span>NEW</span>
+            <br>
+            <span>LIMITED EDITION</span>
+            <br>
+
+            <img src="https://www.sephora.com/productimages/sku/s2616746-main-zoom.jpg?imwidth=230" alt="">
+            <h3>Fenty Beauty by Rihanna</h3>
+            <p>Glossy Posse Lip Gloss Bomb Trio</p>
+            <h2>$68</h2>
+
+        </div>
+
 
     </div>
+    <div class="searchcont"></div>
+
 </body>
+
 </html>
 <script>
-  
+    let bag = [];
+    async function getData() {
+        try {
+            let res = await fetch("https://636e5216182793016f3d6178.mockapi.io/product")
+            let out = await res.json();
+            console.log(out[1])
+            bag = [...out];
+            displayCards(out)
+        } catch {
+            console.log("error")
+        }
+    } getData();
+
+    function search() {
+        document.querySelector("#pcontainer").innerHTML = "";
+        let x = document.querySelector(".searchh").value
+        console.log(document.querySelector(".searchh").value)
+        console.log(bag)
+        let newData = bag.filter(function (ele) {
+            return ele.title.toLowerCase().includes(x.toLowerCase());
+        })
+        console.log(newData)
+        displayCards(newData)
+    }
+    function displayCards(out) {
+        
+        document.querySelector(".searchcont").innerHTML = "";
+        console.log(out.length)
+        for (let i = 0; i < 15; i++) {
+
+            let div1 = document.createElement("div");
+
+
+            let sp=document.createElement("span");
+            sp.innerText="Limited Edition"
+
+            let image = document.createElement("img");
+            image.setAttribute("src", out[i].avatar)
+            let title = document.createElement("h2");
+            title.innerText = out[i].title;
+
+            let td2 = document.createElement("p");
+            td2.innerText = out[i].description;
+            let price = document.createElement("p");
+            price.innerText = out[i].price;
+            div1.append(image, title, td2, price);
+            document.querySelector(".searchcont").append(div1)
+        }
+    }
+
+    function filterr(){
+        document.querySelector("#pcontainer").innerHTML = "";
+        let selected= document.querySelector(".filt").value;
+      
+        let filteredData=bag.filter(function (ele){
+           
+            return ele.price<=selected;
+           
+        });
+        
+        console.log(filteredData)
+        displayCards(filteredData);
+
+    }
+
+
 </script>
