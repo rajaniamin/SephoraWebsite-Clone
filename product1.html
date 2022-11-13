@@ -10,7 +10,7 @@
 <body>
     <div id="nav">
         <div>
-            <a href="index.html"> <img  width="100px" height="60px" src="C:\Users\Rajani\Desktop\Day-4\ceaseless-meeting-9748\images\logo2.png"
+            <a href="index.html"> <img  width="100px" height="60px" src="images\logo2.png"
                 alt=""></a>
         </div>
         <div><input type="text" placeholder="Search"></div>
@@ -68,7 +68,7 @@
         <p>or $13.50 off your Sephora order when you open and use a Sephora Credit Card today.</p>
         <button>Add to Basket</button>
         <br>
-        <img class="wish" width="30px" height="40px" onclick="wishlist()"
+        <img class="wish" width="30px" height="40px" id="wish"
         src="https://th.bing.com/th/id/OIP.MunGuHHoS2p73PBI917uqwHaHa?w=191&h=192&c=7&r=0&o=5&dpr=1.25&pid=1.7"
         alt="">
     <br></div>
@@ -137,6 +137,8 @@
 
     }
 
+
+    document.querySelector("#wish").addEventListener("click",wishlist)
     let data1=JSON.parse(localStorage.getItem("wishlist"))||[];
     function wishlist(){
         count++;
@@ -144,12 +146,12 @@
             alert("The item is already added to wishlist. Do you want to remove from wishlist?")
         }else{
             
-            let obj={
+            let obj1={
             name: "Bliss Collection",
             dis:" Makeup Must Have Set",
             price:"$54.00 ($150.00 value)"
         }
-        data1.push(obj);
+        data1.push(obj1);
 
         localStorage.setItem("wishlist", JSON.stringify(data1))
 
