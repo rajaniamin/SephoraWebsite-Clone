@@ -1,5 +1,5 @@
 # SEPHORA WEBSITE-CLONE (Individual project)
-![Bliss (5)](https://user-images.githubusercontent.com/112753940/229489575-28924a3a-bf50-4ab0-8c36-ea46d29e6aa5.png)
+![image](https://user-images.githubusercontent.com/112753940/229489795-b7c0339e-9374-46c7-b3b2-d9c93c030c25.png)
 
 This website is a clone of Sephora which is an online retailing of cosmetics and personal care e-commerce Website where one can buy the products via the internet.
 And gave a unique as Bliss.com
