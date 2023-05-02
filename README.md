@@ -1,4 +1,5 @@
 # SEPHORA WEBSITE-CLONE (Individual project)
+https://deft-belekoy-e49355.netlify.app/
 ![image](https://user-images.githubusercontent.com/112753940/229489795-b7c0339e-9374-46c7-b3b2-d9c93c030c25.png)
 
 This website is a clone of Sephora which is an online retailing of cosmetics and personal care e-commerce Website where one can buy the products via the internet.
