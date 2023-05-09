@@ -1,5 +1,5 @@
 # SEPHORA WEBSITE-CLONE (Individual project)
-https://deft-belekoy-e49355.netlify.app/
+
 <br/>
 ![image](https://user-images.githubusercontent.com/112753940/229489795-b7c0339e-9374-46c7-b3b2-d9c93c030c25.png)
 
